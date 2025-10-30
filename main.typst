@@ -46,9 +46,18 @@
 #slide[
   = What we do today
 
-  1. What makes the language great (tooling, ecosystem, community)
+  #grid(
+  columns: 2,
+  gutter: 3em,
+  [
+  1. What makes the language great (tooling, ecosystem)
   2. How you do things in Rust (branches, loops, classes etc.)
-  3. (optional) Open Challenge: (Advent of Code 2022)
+  3. Open Challenge: (Advent of Code 2022)
+  ],
+  [
+    #image(height: 60%, "images/qr-slides.png")
+    #text(12pt)[https://github.com/yguenduez/rust-101-slides]
+  ])
 
   == Goal: You can write small programs
 ]
