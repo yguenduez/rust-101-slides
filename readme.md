@@ -8,6 +8,8 @@ Code to this workshop:
 
 ## Building the slides
 
+> Note: The slides are committed in `out/slides.pdf`. So no need to buld them.
+
 ### Prerequisites
 
 - [Typst](https://typst.app/open-source/#download)
