@@ -73,11 +73,9 @@ curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh
 ]
 
 #slide[
-  = Ecosystem
+  = Ecosystem - Cargo is everything
 
-  == Cargo - the package manager
-
-  Let's create a rust project - and build a hello world
+  Let's create a hello world rust project
 
   ```sh
   cargo new my_first_rust_project
