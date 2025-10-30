@@ -211,3 +211,22 @@ curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh
   #image(height: 70%, "images/qr-aoc.png")
   ])
 ]
+
+#slide[
+  = Additional Resources
+
+  == Great Books for Beginners
+
+  - #link("https://doc.rust-lang.org/book/")[
+    The Rust Programming Language
+  ]
+  - #link("https://doc.rust-lang.org/rust-by-example/")[
+    Rust by Example
+  ]
+
+  == Hands-On
+
+  - #link("https://rustlings.rust-lang.org/")[
+    Rustlings
+  ]
+]
