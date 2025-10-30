@@ -169,7 +169,7 @@ curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh
 #slide[
   = Basics
 
-  == Second Part of the workshop: TODO QR-code
+  == Second Part of the workshop
 
   #grid(
     columns: 2,
@@ -179,6 +179,6 @@ curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh
   git clone git@github.com:yguenduez/rust-101.git
   ```
     ],[
-  #image(height: 70%, "images/yasin.jpeg")
+  #image(height: 70%, "images/qr-project.png")
   ])
 ]
