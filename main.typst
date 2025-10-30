@@ -1,0 +1,167 @@
+#import "@preview/polylux:0.4.0": *
+#import "@preview/metropolis-polylux:0.1.0" as metropolis
+#import metropolis: new-section, focus
+#import "@preview/treet:1.0.0": *
+
+#show: metropolis.setup.with(
+  text-font: "DejaVu Sans Mono",
+  math-font: "DejaVu Sans Mono",
+  code-font: "DejaVu Sans Mono",
+  text-size: 22pt,
+  footer: [Rust 101 Workshop \#4 \@ BaselHack 2025],
+)
+
+#set page(paper: "presentation-16-9")
+#set text(size: 25pt, font: "DejaVu Sans Mono")
+
+#slide[
+    #show: focus
+    #toolbox.side-by-side[
+    Rust Basel \
+    #text(size: 0.5em)[
+    Rust 101 \@ BaselHack 2025]
+    ][
+    #image("images/rust-basel-logo.png")
+    ]
+]
+
+#slide[
+  = About Rust-Basel
+
+    - Non-profit swiss association
+    - Founded in March
+    #toolbox.side-by-side[
+      #image("images/jonatas.jpeg")
+    ][
+      #image("images/gigapixel.jpeg")
+    ][
+      #image("images/silen.jpeg")
+    ][
+      #image("images/roland.jpeg")
+    ][
+      #image("images/yasin.jpeg")
+    ]
+]
+
+#slide[
+  = What we do today
+
+  1. What makes the language great (tooling, ecosystem, community)
+  2. How you do things in Rust (branches, loops, classes etc.)
+  3. (optional) Open Challenge: (Advent of Code 2022)
+
+  == Goal: You can write small programs
+]
+
+#slide[
+ = Some Prerequisites
+
+ #link("https://rust-lang.org/tools/install/")[Install Rust]
+
+```sh
+curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh
+```
+]
+
+#slide[
+  = Ecosystem
+
+  == Cargo - the package manager
+
+  Let's create a rust project - and build a hello world
+
+  ```sh
+  cargo new my_first_rust_project
+  cd my_first_rust_project
+  # Builds and runs the project
+  cargo run
+  # Just build the project
+  cargo build
+  ```
+]
+
+#slide[
+  = Ecosystem - project structure
+
+#grid(
+    columns: 2,
+    gutter: 5em,
+  [== your-project
+    #tree-list[
+    - src/
+        - main.rs
+        - (lib.rs)
+    - target/
+        - /debug
+            - \<binary\>
+    - Cargo.toml
+    - Cargo.lock
+    ]],
+    [
+    - #text(weight: "bold")[src]: Source files
+    - #text(weight: "bold")[target]: Binary files (libraries/executables)
+    - #text(weight: "bold")[Cargo.toml]: Meta info (dependecies, authors, licenses etc.)
+    - #text(weight: "bold")[Cargo.lock]: pinning dependencies to a specific version (hash)
+    ]
+    )
+]
+
+#slide[
+  = Ecosystem - Where to find libs?
+
+  == Libraries
+
+    - #link("crates.io")[
+    Crates.io
+    ]
+    - #link("lib.rs")[
+    lib.rs
+    ]
+]
+
+#slide[
+  = Ecosystem - adding a library
+
+  #grid(
+  columns: 2,
+  gutter: 5em,
+  [```sh
+  cargo add serde -F derive
+  cargo add serde_json
+  cargo add --dev rstest
+  ```],[
+  -F/--feature: libs come with feature flags
+
+  --dev: dev/test dependencies
+  ])
+]
+
+#slide[
+  = Ecosystem - tooling
+
+  #grid(
+  columns: 2,
+  gutter: 5em,
+  [
+  ```sh
+  # build/runs your code
+  cargo build/run (--release)
+  # formats your code
+  cargo fmt
+  # lints your code
+  cargo clippy
+  # executes your tests
+  cargo test
+  # generates documentation for your crate
+  cargo doc (--open)
+  ```
+  ],
+  [
+  ```sh
+  # Updates the rust compiler
+  rustup update
+  # Install other toolchain (e.g. iOS on ARM64)
+  rustup target add aarch64-apple-ios
+  ```
+  ])
+]
