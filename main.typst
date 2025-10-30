@@ -8,7 +8,7 @@
   math-font: "DejaVu Sans Mono",
   code-font: "DejaVu Sans Mono",
   text-size: 22pt,
-  footer: [Rust 101 Workshop \#4 \@ BaselHack 2025],
+  footer: [Rust 101 Workshop \@ BaselHack 2025],
 )
 
 #set page(paper: "presentation-16-9")
@@ -162,6 +162,8 @@ curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh
   rustup update
   # Install other toolchain (e.g. iOS on ARM64)
   rustup target add aarch64-apple-ios
+  # To then build against that target
+  cargo build --release --target aarch64-apple-ios
   ```
   ])
 ]
@@ -169,16 +171,34 @@ curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh
 #slide[
   = Basics
 
-  == Second Part of the workshop
+  == Second part of the workshop
 
   #grid(
     columns: 2,
     gutter: 1em,
     [
   ```sh
-  git clone git@github.com:yguenduez/rust-101.git
+  https://github.com/yguenduez/rust-101
   ```
     ],[
   #image(height: 70%, "images/qr-project.png")
+  ])
+]
+
+#slide[
+  = Advent of Code 2022
+
+  == Third part of the workshop
+  #grid(
+    columns: 2,
+    gutter: 1em,
+    [
+      Try to solve the first challenge of Advent-of-Code 2022,
+      with the Rust basics you learned =).
+  ```sh
+  https://github.com/yguenduez/rust-101-aoc
+  ```
+    ],[
+  #image(height: 70%, "images/qr-aoc.png")
   ])
 ]
