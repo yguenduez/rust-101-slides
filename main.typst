@@ -28,19 +28,29 @@
 #slide[
   = About Rust-Basel
 
-    - Non-profit swiss association
-    - Founded in March
-    #toolbox.side-by-side[
-      #image("images/jonatas.jpeg")
-    ][
-      #image("images/gigapixel.jpeg")
-    ][
-      #image("images/silen.jpeg")
-    ][
-      #image("images/roland.jpeg")
-    ][
-      #image("images/yasin.jpeg")
+  #grid(
+    columns: 2,
+    gutter: 1em,
+    [
+      Non-profit swiss association
+      Founded in March
+      #toolbox.side-by-side[
+        #image("images/jonatas.jpeg")
+      ][
+        #image("images/gigapixel.jpeg")
+      ][
+        #image("images/silen.jpeg")
+      ][
+        #image("images/roland.jpeg")
+      ][
+        #image("images/yasin.jpeg")
+      ]
+    ],
+    [
+      #image(height: 80%,"images/qr-basel.png")
+      #text(12pt)[https://rust-basel.ch]
     ]
+  )
 ]
 
 #slide[
