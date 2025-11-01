@@ -193,6 +193,45 @@ curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh
 ]
 
 #slide[
+  = Basics - Core Concepts - Ownership
+
+  ```rust
+  #[derive(Debug)]
+  struct Number(i32);
+
+  fn main(){
+    let x = Number(5);
+    let y = x;
+
+    // Won't compile, as x does not own
+    // Number anymore - Number got "moved"
+    // to y
+    println!("Number: {:?}", x);
+  }
+  ```
+]
+
+#slide[
+  = Basics - Core Concepts - Borrowing
+
+  ```rust
+  #[derive(Debug)]
+  struct Number(i32);
+
+  fn main(){
+    let mut x = Number(5);
+    let y = &x; // immutable borrow
+    let z = &mut x; // mutable borrow
+
+    // Won't compile - we cannot have a read-only
+    // borrow and a mutable borrow
+    // at the same time
+    println!("We use y {:?} and z {:?}", y,z);
+  }
+  ```
+]
+
+#slide[
   = Advent of Code 2022
 
   == Third part of the workshop
